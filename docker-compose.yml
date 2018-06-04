@@ -17,6 +17,9 @@ services:
       - php
 
   mysql:
-    image: mysql:5.7
+    build: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: mysql
+      TZ: "Asia/Tokyo"
+    ports:
+    - "3306:3306"
